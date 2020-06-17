@@ -10,8 +10,9 @@ DEFAULT_BRANCH = "master"
 DEFAULT_START_DATE = "1970-01-01T00:00:00Z"
 DEFAULT_END_DATE = datetime.utcnow().strftime(DATE_MASK)
 PER_PAGE = 100
-COMMITS_URL = "https://api.github.com/repos/{owner}/{repo}/commits{params}"
-ISSUES_URL = "https://api.github.com/repos/{owner}/{repo}/issues{params}"
+BASE_URL = "https://api.github.com/repos/{owner}/{repo}/"
+COMMITS_URL = BASE_URL + "commits{params}"
+ISSUES_URL = BASE_URL + "issues{params}"
 
 OLD_DAYS_NUM = {"pull_request": 30, "issue": 14}
 
